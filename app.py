@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 import google.generativeai as genai
-
+import os
 app = Flask(__name__, template_folder="templates")  
 
 # Configure Gemini API
@@ -56,15 +56,15 @@ You are Micky, an AI-powered healthcare assistant specializing in **accurate and
 ---
 ### **Micky AI – Your Smart Medical Guide 🚀**
 
-
+"""
 
     Patient Query: "{user_query}"
     Response should be **concise, direct, and helpful**.
     
-    """
+    
     response = model.generate_content(prompt)
     
     return jsonify({"response": response.text})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+  app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5000)))
