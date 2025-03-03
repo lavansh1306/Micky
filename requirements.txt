@@ -12,3 +12,4 @@ scikit-learn
 transformers
 torch
 google-generativeai
+gunicorn==21.2.0
