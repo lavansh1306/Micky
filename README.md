@@ -267,10 +267,13 @@ Micky/
 ├── runtime.txt            # Python version specification
 ├── Procfile               # Heroku deployment configuration
 ├── README.md              # Project documentation
+├── docs/
+│   └── architecture.svg   # System architecture diagram
 ├── templates/
 │   └── index.html         # Main HTML interface
 └── static/
     ├── css/
+    │   └── styles.css     # Styling and animations
     │   └── styles.css     # Application styling
     └── js/
         └── script.js      # Frontend JavaScript logic
